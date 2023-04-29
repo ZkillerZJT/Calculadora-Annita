@@ -14,7 +14,12 @@ class Producto:
         self.precio_unit = precio_unit
         self.tipo = tipo
         
-    
+def ajustar_precio(altoP1, anchoP1, altoP2, anchoP2, precio_unitario_P1):
+    area_P1 = altoP1 * anchoP1
+    area_P2 = altoP2 * anchoP2
+    multiplicador_precio_para_P2 = area_P1 / area_P2
+    precio_unitario_P2 = precio_unitario_P1*multiplicador_precio_para_P2
+    return precio_unitario_P2
 
 def obtener_productos(): #sub funcion
     # Leer el archivo productos.csv y guarda la información en una lista de diccionarios
